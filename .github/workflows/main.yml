@@ -32,8 +32,7 @@ jobs:
           fail-on-error: true
 
       - name: Build and push the image
-
         run: |
           docker login --username wkusper --password ${{secrets.ACCESS_TOKEN}} ghcr.io
-          docker build -t ghcr.io/wkusper/backend_guitar:latest --file DockerFile .  
-          docker push ghcr.io/wkusper/backend_guitar:latest
+          docker build -t ghcr.io/wkusper/guitar-inventory-management:latest --file Dockerfile .  
+          docker push ghcr.io/wkusper/guitar-inventory-management:latest 
